@@ -19,3 +19,19 @@ end;
 
 I3 = zeros(s1);
 
+for y = 1:s2(2)
+  for x = 1:s2(1)
+    I3(x * 2 - 1, y * 2 - 1) = I2(x, y);
+  end;
+end;
+
+I3up = imfilter(I3, BL);
+
+sum = 0;
+for x = 1:s1(1)
+  for y = 1:s1(2)
+    sum = sum + (I1d(x,y) - I3up(x,y))^2;
+  end;
+end;
+MSE  = sum / (s1(1) * s1(2));
+PSNR = 10 * log10(1 / MSE)
