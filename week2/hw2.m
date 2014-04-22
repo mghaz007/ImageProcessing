@@ -1,4 +1,4 @@
-I = imread('/Users/nschelle/tmp/lena.gif');
+I = imread('lena.gif');
 Id = im2double(I);
 
 LP1 = [1.0/9.0, 1.0/9.0, 1.0/9.0; 1.0/9.0, 1.0/9.0, 1.0/9.0; 1.0/9.0, 1.0/9.0, 1.0/9.0];
