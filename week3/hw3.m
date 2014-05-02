@@ -27,4 +27,4 @@ end;
 
 I3up = imfilter(I3, BL);
 
-psnr = PSNR(I1d, I3up)
+psnr = PSNR(I1d, I3up, 1)
