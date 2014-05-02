@@ -1,4 +1,4 @@
-I1 = imread('/Users/nschelle/tmp/original_quiz.jpg');
+I1 = imread('original_quiz.jpg');
 s1 = size(I1);
 
 I1d = im2double(I1);
@@ -27,11 +27,4 @@ end;
 
 I3up = imfilter(I3, BL);
 
-sum = 0;
-for x = 1:s1(1)
-  for y = 1:s1(2)
-    sum = sum + (I1d(x,y) - I3up(x,y))^2;
-  end;
-end;
-MSE  = sum / (s1(1) * s1(2));
-PSNR = 10 * log10(1 / MSE)
+psnr = PSNR(I1d, I3up)
