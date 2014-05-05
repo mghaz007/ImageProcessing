@@ -5,7 +5,8 @@ close all
 clc
 
 % specify the threshold T
-T = 1e-1;
+% T = 1e-1;
+T = 0.5;
 
 %% read in the original, sharp and noise-free image
 original = im2double(rgb2gray((imread('original_cameraman.jpg'))));
@@ -41,6 +42,7 @@ restored(restored > 1) = 1;
 noisy_psnr = 10 * log10(1 / (norm(original - noisy, 'fro') ^ 2 / H / W));
 restored_psnr = 10 * log10(1 / (norm(original - restored, 'fro') ^ 2 / H / W));
 
+isnr = 10 * log10((norm(original - noisy, 'fro') ^ 2) / ( norm(original - restored, 'fro') ^ 2) );
 
 %% visualization
 figure; imshow(original, 'border', 'tight');
@@ -49,3 +51,5 @@ figure; imshow(noisy, 'border', 'tight');
 figure; imshow(restored, 'border', 'tight');
 figure; plot(abs(fftshift(motion_freq(1, :)))); title('spectrum of motion blur'); xlim([0 1024]);
 figure; plot(abs(fftshift(inverse_freq(1, :)))); title('spectrum of inverse filter'); xlim([0 1024]);
+
+sprintf('ISNR = %f', isnr)
