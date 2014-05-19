@@ -22,10 +22,9 @@ values = [0.0001, 0.001, 0.01, 0.1, 1, 10, 100];
 for alpha=values
   image_cls_restored = cls_restoration(image_noisy, blur_impulse, alpha);
 
-%% computation of ISNR
-  isnr = 10 * log10((norm(image_original - image_noisy, 'fro') ^ 2) / ( norm(image_original - image_cls_restored, 'fro') ^ 2) );
-  sprintf('alpha = %f, ISNR = %f', alpha, isnr)
+  ISNR = isnr(image_original, image_noisy, image_cls_restored);
+  disp(['alpha = ' num2str(alpha), ' - ISNR = ' num2str(ISNR)]);
   
-  lbl = strcat('ALPHA: ', num2str(alpha), ' ISNR:', num2str(isnr))
+  lbl = strcat('ALPHA: ', num2str(alpha), ' ISNR:', num2str(ISNR));
   figure('Name', lbl); imshow(image_cls_restored, 'border', 'tight');
 end
