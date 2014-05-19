@@ -26,12 +26,12 @@ prob = double(hist) ./ s;
 
 %% calculate entropy
 
-entro = double(0);
 sprob = size(prob);
+entro = double(0);
 for i = 1:sprob
-    entro = entro + prob(i) * log(prob(i)) / log(2);
+    entro = entro + prob(i) * log(prob(i));
 end
-entro = entro * -1;
+entro = -entro / log(2);
 
 disp(['Entropy of image = ' num2str(entro)]);
 
