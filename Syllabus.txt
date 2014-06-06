@@ -1,0 +1,95 @@
+Syllabus
+
+Week 1 - Introduction to Image and Video Processing
+- Analog v.s. digital signals
+- Image and video signals
+- Electromagnetic spectrum
+
+Week 2 - Signals and Systems
+- 2D and 3D discrete signals
+- Complex exponential signals
+- Linear shift-invariant systems
+- 2D convolution
+- Filtering in the spatial domain
+
+Week 3 - Fourier Transform and Sampling
+- 2D Fourier transform
+- Sampling
+- Discrete Fourier transform
+- Filtering in the frequency domain
+
+Week 4 - Motion Estimation and Color Image Processing
+- Applications of motion estimation
+- Phase correlation
+- Block matching
+- Spatio-temporal gradient methods
+- Fundamentals of color image processing
+
+Week 5 - Image Enhancement
+- Introduction
+- Point-wise intensity transformation
+- Histogram processing
+- Linear noise smoothing
+- Non-linear noise smoothing
+- Sharpening
+- Homomorphic filtering
+- Pseudo coloring
+- Video enhancement
+
+Week 6 - Image Recovery - part I
+- Examples of image and video recovery
+- Image restoration
+- Matrix-vector notation for images
+- Inverse filtering 
+- Constrained least squares (CLS)
+- Set-theoretic restoration approaches
+- Iterative restoration algorithms
+- Iterative least-squares and iterative constrained least-squares
+- Spatially adaptive algorithms
+
+Week 7 - Image Recovery - part II
+- Wiener restoration filter
+- Wiener restoration filter v.s. constrained least-squares filter
+- Wiener noise smoothing filter 
+- Maximum likelihood and maximum a posteriori estimation
+- Bayesian restoration algorithms
+- Other restoration applications
+
+Week 8 - Lossless Compression
+- Introduction
+- Elements of information theory - part I
+- Elements of information theory - part II
+- Huffman coding
+- Run-length coding and fax
+- Arithmetic coding
+- Dictionary techniques
+- Predictive coding
+
+Week 9 - Image Compression
+- Scalar quantization
+- Vector quantization
+- Differential pulse-code modulation
+- Fractal image compression
+- Transform coding
+- JPEG
+- Subband image compression 
+
+Week 10 - Video Compression
+- Motion-compensated hybrid video encoding
+- On video compression standards
+- Early standards (H.261, H.263, MPEG-1 and MPEG-2)
+- MPEG-4
+- H.264
+- H.265
+
+Week 11 - Image and Video Segmentation
+- Methods based on intensity discontinuity
+- Methods based on intensity similarity
+- Methods based on morphology
+- Motion-based segmentation 
+
+Week 12 - Sparsity 
+- Sparsity-promoting norms
+- Matching Pursuit
+- Smooth reformulations
+- Applications 
